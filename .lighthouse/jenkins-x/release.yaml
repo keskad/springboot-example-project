@@ -26,8 +26,12 @@ spec:
           resources: {}
         - name: jx-variables
           resources: {}
-        - name: build-gradle-build
-          resources: {}
+        - image: "openjdk:8u302-jdk-buster"
+          name: build-gradle-build
+          resources: { }
+          script: |
+              #!/bin/sh
+              ./gradlew clean build
         - name: check-registry
           resources: {}
         - name: build-container-build
