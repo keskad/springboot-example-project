@@ -31,6 +31,7 @@ spec:
           resources: { }
           script: |
               #!/bin/sh
+              chmod +x ./gradlew
               ./gradlew clean build
         - name: check-registry
           resources: {}
