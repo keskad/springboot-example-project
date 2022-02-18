@@ -41,8 +41,12 @@ spec:
           resources: {}
         - name: promote-helm-release
           resources: {}
-#        - name: promote-jx-promote
-#          resources: {}
+          script:
+              exit 0
+        - name: promote-jx-promote
+          resources: {}
+          script:
+              exit 0
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s
