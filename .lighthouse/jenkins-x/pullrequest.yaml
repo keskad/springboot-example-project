@@ -15,22 +15,14 @@ spec:
           name: ""
           resources:
             requests:
-              cpu: 400m
-              memory: 512Mi
+              cpu: 0
+              memory: 128Mi
           workingDir: /workspace/source
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
           name: ""
           resources: {}
         - name: jx-variables
-          resources: {}
-        - name: build-gradle-build
-          resources: {}
-        - name: check-registry
-          resources: {}
-        - name: build-container-build
-          resources: {}
-        - name: promote-jx-preview
           resources: {}
   podTemplate: {}
   serviceAccountName: tekton-bot
